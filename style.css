@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    font-family: 'monserat', sans-serif;
+    background-color: black
+}
+
+.container{
+    display: flex;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+.header{
+    width: 100%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    
+}
+
+.description{
+    
+}
+
+.box__input{
+    border: 3px solid #ffff;
+    width: 40vw;
+    height: 7vh;
+    margin-top: 1vw;
+    display: flex;
+    font-size: 25px;
+}
+
+.box__input input{
+width: 90%;
+height: 100%;
+margin: 0;
+
+text-decoration: none;
+}
+
+.box__input button{
+    height: 100%;
+    width: 10%;
+    
+}
