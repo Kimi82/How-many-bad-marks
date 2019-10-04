@@ -32,29 +32,108 @@ body{
     
 }
 
-.description{
-    
-}
 
 .box__input{
-    border: 3px solid #ffff;
     width: 40vw;
     height: 7vh;
     margin-top: 1vw;
     display: flex;
     font-size: 25px;
+
+    
 }
 
 .box__input input{
-width: 90%;
-height: 100%;
-margin: 0;
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 20px;
+    padding-bottom: 0;
 
-text-decoration: none;
+
 }
 
 .box__input button{
     height: 100%;
     width: 10%;
+    color: white;
+    background-color: transparent;
+    margin-left: 15px;
+    border: 3px white solid;
+}
+
+.box__input button:hover{
+    color:black;
+    background-color: white;
+    border: none;
+}
+
+.field{
+    display: flex;
+    width: 500px;
+    height: 200px;
+    border: 3px solid white;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+;
     
+}
+.field input{
+    width: 20vw;
+    height: 30%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    
+    font-size: 18px;
+    
+    margin-top: 2%;
+    padding: 20px;
+    padding-bottom: 0;
+    
+    
+    
+}
+    
+.field__button{
+    
+    width: 10%;
+    color: white;
+    background-color: transparent;
+    border: 2px white solid;
+    margin: 7px 0 0;
+    
+}
+
+.field__button:hover{
+    color:black;
+    background-color: white;
+    
+}
+
+.field__title{
+    position: relative;  
+    left: -35%;
+    padding: 5px 0 5px;  
+}
+
+.field__subtitle{
+    color: whitesmoke;
+    margin-top: 20px;
+}
+    
+.container2{
+    width: 80%;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;    
 }
