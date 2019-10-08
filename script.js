@@ -14,16 +14,16 @@ submitButton.onclick = function(){
     const describe = document.getElementById("description");
     describe.innerText = "Now enter your marks in right fields bellow";
 
-    var howManyFields = tabValue.length;
+    var howManyFields = tabValue.length-1;
     
-    createField(howManyFields);
+    createField(howManyFields, tabValue);
 } 
 
 
-function createField(howManyFields){
+function createField(howManyFields, tabValue){
     console.log(howManyFields, "dupa1") // how many fields need to create.
 
-    for(var i=0; i>=howManyFields; i++){
+    for(var i=0; i<=howManyFields; i++){
 
         console.log("dupa2")
 
@@ -41,20 +41,25 @@ function createField(howManyFields){
         input.classList.add("field__input");
         button.classList.add("field__button");
 
-        title1.innerText = "Height I TU ZMIENNA";
+        title1.innerText = `Height: ${tabValue[i]}` 
         title2.innerText = "Marks added:";
         title3.innerText = "Add your marks here:";
         button.innerText = "Done!";
 
-        container.append(title1);
-        container.append(title2);
-        container.append(title3);
-        container.append(input);
-        container.append(button);
+        container.appendChild(title1);
+        container.appendChild(title2);
+        container.appendChild(title3);
+        container.appendChild(input);
+        container.appendChild(button);
 
-        const placeForNewField = document.getElementsByClassName("Container2");
-        document.body.insertBefore(container, placeForNewField);
+        
 
+        const placeForNewField = document.querySelector("body > div > div.container2");
+        
+       // document.body.insertBefore(container, placeForNewField);
+       placeForNewField.appendChild(container);
+
+        
 
 
     }
