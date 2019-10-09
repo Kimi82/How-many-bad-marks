@@ -3,7 +3,6 @@ var submitButton = document.getElementById("submitWeight");
 
 submitButton.onclick = function(){
     var sumbitValue = document.getElementById("submitValue").value;
-    console.log(sumbitValue); //console log na to co wpisane w inputa
     var tabValue = [];
     
     tabValue = sumbitValue.split(" ")
@@ -21,11 +20,11 @@ submitButton.onclick = function(){
 
 
 function createField(howManyFields, tabValue){
-    console.log(howManyFields, "dupa1") // how many fields need to create.
+    console.log(howManyFields+1, "How may fields ") // how many fields need to create.
 
     for(var i=0; i<=howManyFields; i++){
 
-        console.log("dupa2")
+        
 
         const container = document.createElement("div");
         const title1 = document.createElement("h3");
@@ -40,7 +39,8 @@ function createField(howManyFields, tabValue){
         title3.classList.add("field__subtitle");
         input.classList.add("field__input");
         button.classList.add("field__button");
-
+        button.setAttribute("id", `doneButtons${i}`)
+        input.setAttribute("id", `doneInputs${i}`)
         title1.innerText = `Height: ${tabValue[i]}` 
         title2.innerText = "Marks added:";
         title3.innerText = "Add your marks here:";
@@ -59,9 +59,51 @@ function createField(howManyFields, tabValue){
        // document.body.insertBefore(container, placeForNewField);
        placeForNewField.appendChild(container);
 
-        
+    takeButton(howManyFields)
 
 
     }
 
+    function takeButton(howManyFields){
+        
+        var i=0;
+        
+        while(i<=howManyFields){
+            
+           
+            
+
+            var buttonArr = []; //przechowuje referencje do buttonow
+            buttonArr.push(document.getElementById(`doneButtons${i}`))
+            
+        }
+            while(i<=howManyFields){
+            buttonArr[i].onclick = function(){
+                var inputArr = []; //przechowuje referencje do inputow
+                inputArr.push(document.getElementById(`doneInputs${i}`))
+            }
+            i++}
+            while(i<=howManyFields){
+            var inputArrValue = [];
+            inputArrValue.push(document.getElementById(`doneInputs${i}.value`))
+            
+            console.log("XDD",inputArrValue)
+            i++}
+            
+            
+            
+            
+        
+
+    
+    
+     
+    
+       
+        
+      
+    
+        
+    
+    }
 }
