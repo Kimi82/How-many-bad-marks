@@ -66,35 +66,40 @@ function createField(howManyFields, tabValue){
 
     function takeButton(howManyFields){
         
-        var i=0;
+        /*var i=0;
         
         while(i<=howManyFields){
-            
+            var inputArr = [];
            
-            
+            var inputArrValue = [];
 
             var buttonArr = []; //przechowuje referencje do buttonow
-            buttonArr.push(document.getElementById(`doneButtons${i}`))
+            buttonArr.push(document.getElementById(`doneButtons${i}`));
+            i++;
+            console.log(buttonArr)
+        } */
+
+        for(let i=0; i<=howManyFields;i++){
+            var buttonArr = []; //przechowuje referencje do buttonow
+            buttonArr.push(document.getElementById(`doneButtons${i}`)); 
+            
             
         }
-            while(i<=howManyFields){
+        console.log(buttonArr.length)
+            /*
             buttonArr[i].onclick = function(){
-                var inputArr = []; //przechowuje referencje do inputow
+                 //przechowuje referencje do inputow
                 inputArr.push(document.getElementById(`doneInputs${i}`))
             }
-            i++}
-            while(i<=howManyFields){
-            var inputArrValue = [];
+            
             inputArrValue.push(document.getElementById(`doneInputs${i}.value`))
-            
-            console.log("XDD",inputArrValue)
-            i++}
+            console.log(inputArrValue)
             
             
             
-            
-        
-
+            i++
+        }
+        */
     
     
      
